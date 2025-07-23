@@ -48,7 +48,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -85,8 +85,9 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Default for most grids */
     gap: 30px;
-    max-width: 1200px; /* Ensure consistency */
+    max-width: 100%; /* Ensure consistency */
     margin: auto;
+    box-sizing: border-box;
 }
 
 /* Common Card/Item Animation Base */
@@ -161,7 +162,7 @@ section {
 }
 
 .header .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -238,13 +239,13 @@ section {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    max-width: 1000px;
+    max-width: 100%;
     z-index: 1;
 }
 
 .hero-text {
     flex: 1;
-    min-width: 300px;
+    min-width: 100%;
 }
 
 .hero-text h1 {
@@ -283,7 +284,7 @@ section {
     line-height: 1.6;
     color: var(--light-alt-text);
     margin-bottom: 30px;
-    max-width: 550px;
+    max-width: 100%;
 
     /* Animation */
     opacity: 0;
@@ -313,7 +314,7 @@ section {
 
 .hero-image {
     flex: 0 0 auto; /* Don't grow, don't shrink */
-    max-width: 300px; /* Maximum width */
+    max-width: 100%; /* Maximum width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Soft corners instead of circle */
     overflow: hidden;
@@ -349,7 +350,7 @@ section {
 }
 
 .about-content {
-    max-width: 900px;
+    max-width: 100%;
     margin: auto;
     line-height: 1.8;
 }
@@ -545,7 +546,7 @@ section {
 
 .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    max-width: 900px; /* Make it slightly narrower than other grids if needed */
+    max-width: 100%; /* Make it slightly narrower than other grids if needed */
 }
 
 .skill-category {
@@ -606,7 +607,7 @@ section {
 }
 
 .highlight-item {
-    max-width: 900px;
+    max-width: 100%;
     margin: 2rem auto;
     background-color: var(--dark-card-bg);
     border-radius: 16px;
@@ -666,7 +667,7 @@ section {
 
 .edu-item,
 .cert-item {
-    max-width: 700px;
+    max-width: 100%;
     margin: 1.5rem auto;
     background-color: var(--dark-bg); /* Darker background for items */
     border-radius: 12px;
@@ -708,7 +709,7 @@ section {
 
 .achievements-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax as needed */
-    max-width: 900px;
+    max-width: 100%;
 }
 
 .achievement-card {
@@ -791,7 +792,7 @@ section {
 .contact-subtitle {
     font-size: 1.1rem;
     color: var(--light-alt-text);
-    max-width: 450px;
+    max-width: 100%;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -799,7 +800,7 @@ section {
 /* CONTACT CARDS */
 .contact-cards-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    max-width: 1000px;
+    max-width: 100%;
 }
 
 .contact-card {
@@ -914,7 +915,7 @@ footer {
 
 
 /* Responsive Design (unchanged) */
-@media (max-width: 992px) {
+@media (max-width: 100%) {
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -943,7 +944,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100%) {
     .navbar ul {
         flex-direction: column;
         gap: 15px;
@@ -967,7 +968,7 @@ footer {
         padding-top: 100px;
     }
     .hero-image {
-        max-width: 200px; /* Adjust max-width for smaller screens */
+        max-width: 100%; /* Adjust max-width for smaller screens */
         /* height: auto; */ /* Already set */
     }
     .hero-text h1 {
@@ -990,7 +991,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 100%) {
     .hero-text h1 {
         font-size: 2rem;
     }
@@ -1021,7 +1022,7 @@ footer {
         font-size: 0.9rem;
     }
     .hero-image {
-        max-width: 150px; /* Adjust max-width for smallest screens */
+        max-width: 100%; /* Adjust max-width for smallest screens */
         /* height: auto; */ /* Already set */
     }
     .hero-buttons {
@@ -1030,3 +1031,23 @@ footer {
         gap: 15px;
     }
 }
+
+@media (max-width: 100%) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .section {
+      padding: 40px 20px;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  }
+  
