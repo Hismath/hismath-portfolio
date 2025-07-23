@@ -7,6 +7,17 @@
     padding: 0;
 }
 
+/* General Responsive Rules */
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+}
+
+/* For any iframes (e.g., embedded videos) to prevent overflow */
+iframe {
+    max-width: 100%;
+}
 :root {
     --primary-color: #66ccff; /* Softer Blue/Cyan for accents */
     --secondary-color: #ff9966; /* Softer Orange for secondary accents */
